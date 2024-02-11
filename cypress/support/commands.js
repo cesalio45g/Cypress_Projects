@@ -23,3 +23,21 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('sessionLogin', (username, password) => {
+   cy.session(
+      [username, password],
+      () => {
+         cy.visit('/');
+         cy.get('#login2').click();
+         cy.get('#loginusername').should('be.visible');
+         cy.get('#loginusername').clear().type(username);
+         cy.get('#loginpassword').clear().type(password);
+         cy.get('[onclick="logIn()"]').click();
+         // had to add this assertion because the script was going to fast
+         cy.get('#logout2').should('be.visible');
+      },
+      {
+         cacheAcrossSpecs: true,
+      }
+   );
+});
