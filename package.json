@@ -1,0 +1,27 @@
+{
+  "name": "sessions",
+  "version": "1.0.0",
+  "description": "using sessions to log into application repeatedly",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cesalio45g/sessions.git"
+  },
+  "keywords": [
+    "cypress",
+    "sessions",
+    "test"
+  ],
+  "author": "Cesar Gaudin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cesalio45g/sessions/issues"
+  },
+  "homepage": "https://github.com/cesalio45g/sessions#readme",
+  "dependencies": {
+    "cypress": "^13.6.4"
+  }
+}
