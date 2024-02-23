@@ -23,5 +23,8 @@
   "homepage": "https://github.com/cesalio45g/sessions#readme",
   "dependencies": {
     "cypress": "^13.6.4"
+  },
+  "devDependencies": {
+    "chai-json-schema": "^1.5.1"
   }
 }

@@ -2,13 +2,16 @@ const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
    e2e: {
-      baseUrl: 'https://demoblaze.com/',
+      baseUrl: 'https://calendarific.com/api/v2',
       viewportHeight: 720,
       viewportWidth: 1280,
       specPattern: ['./cypress/e2e/**/*.cy.js'],
       experimentalRunAllSpecs: true,
       setupNodeEvents(on, config) {
-         // implement node event listeners here
+         // put commands here
+      },
+      env: {
+         hello: 'HELLO WORLD!',
       },
    },
 });
