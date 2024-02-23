@@ -6,3 +6,4 @@ logs
 
 #environment variables
 .env
+cypress.env.json

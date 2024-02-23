@@ -1,0 +1,64 @@
+{
+   "title": "US Holiday JSon Schema",
+   "description": "The data structure for the Holiday API response",
+   "type": "object",
+   "required": ["meta", "response"],
+   "properties": {
+      "meta": {
+         "type": "object",
+         "properties": {
+            "code": {
+               "type": "number",
+               "data": {
+                  "enum": 200
+               }
+            }
+         }
+      },
+      "response": {
+         "type": "object",
+         "properties": {
+            "holidays": {
+               "type": "array"
+            },
+            "items": {
+               
+            }"#ref": "#/$defs/holidays"
+         }
+      }
+   },
+   "$defs": {
+      "holidays": {
+         "properties": {
+            "name": {
+               "type": "string"
+            },
+            "description": {
+               "type": "string"
+            },
+            "country": {
+               "type": "object",
+               "#ref": "#/$defs/country"
+            }
+         }
+      },
+      "country": {
+         "type": "object",
+         "required": ["id", "country", "who"],
+         "properties": {
+            "id": {
+               "type": "string",
+               "data": {
+                  "enum": "CA"
+               }
+            },
+            "name": {
+               "type": "string",
+               "data": {
+                  "enum": "United States"
+               }
+            }
+         }
+      }
+   }
+}
