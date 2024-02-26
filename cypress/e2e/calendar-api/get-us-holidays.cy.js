@@ -1,9 +1,13 @@
+/// <reference-types="@bahmutov/cy-api" />
+
 import holidayArray from './USHolidayData.json';
 import holidaySchema from './USHolidays.spec.json';
 
 describe('Given we make a Holiday API request', () => {
    beforeEach('Make Holiday API request', () => {
-      cy.request({
+      // This uses the new cy-api plugin which outputs the request and response right into the browser window
+      // without having to open the "console"
+      cy.api({
          method: 'GET',
          url: '/holidays',
          body: {
@@ -23,7 +27,7 @@ describe('Given we make a Holiday API request', () => {
          });
       });
 
-      it.skip('Then the API shall return all US, National holidays for the year 2024', () => {
+      it('Then the API shall return all US, National holidays for the year 2024', () => {
          cy.get('@holidays').then($holidays => {
             let holidays = $holidays.body.response.holidays;
             let holidayLength = holidays.length;

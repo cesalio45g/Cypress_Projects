@@ -25,6 +25,7 @@
     "cypress": "^13.6.4"
   },
   "devDependencies": {
+    "@bahmutov/cy-api": "^2.2.6",
     "chai-json-schema": "^1.5.1"
   }
 }
