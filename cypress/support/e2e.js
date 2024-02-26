@@ -21,3 +21,6 @@ import './commands';
 
 // Chai JSon Schema
 chai.use(require('chai-json-schema'));
+
+// cy-api
+import '@bahmutov/cy-api';
