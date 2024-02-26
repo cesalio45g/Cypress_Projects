@@ -1,14 +1,15 @@
-Pull Request Name: 
-test: ''
+**Pull Request Name: **
+test: 
 
-Branch Name:
+**Branch Name:**
+-- branch-name-here --
 
-Description:
+**Description:**
 - [] Did you finish all tests
 - [] Did you assign an owner to PR
 - [] Did you add "test" and "cypress" tags to PRd
 
-Created By:
-Cesar Gaudin
+**Created By:**
+*Cesar Gaudin*
 
-Date:
+**Date:**
